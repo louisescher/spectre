@@ -5,7 +5,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import spectre from './package/src';
 
-import node from '@astrojs/node';
+import staticSite from '@astrojs/static-site';
 
 // https://astro.build/config
 export default defineConfig({
