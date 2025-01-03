@@ -9,32 +9,32 @@ import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://spectre.louisescher.dev',
+  site: 'https://duplicake.fyi',
   output: 'static',
   integrations: [
     expressiveCode(),
     mdx(),
     sitemap(),
     spectre({
-      name: 'Spectre',
+      name: 'Duplicake',
       openGraph: {
         home: {
-          title: 'Spectre',
-          description: 'A minimalistic theme for Astro.'
+          title: 'Hompage',
+          description: 'The homepage of my website.'
         },
         blog: {
           title: 'Blog',
-          description: 'News and guides for Spectre.'
+          description: 'My Blog where I dump random stuff.'
         },
         projects: {
           title: 'Projects'
         }
       },
       giscus: {
-        repository: 'louisescher/spectre',
-        repositoryId: 'R_kgDONjm3ig',
+        repository: 'SomeRandomCpu/website-spectre',
+        repositoryId: 'R_kgDONlh9tw',
         category: 'General',
-        categoryId: 'DIC_kwDONjm3is4ClmBF',
+        categoryId: 'DIC_kwDONlh9t84CltGC',
         mapping: 'pathname',
         strict: true,
         reactionsEnabled: true,
