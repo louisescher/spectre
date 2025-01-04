@@ -3,22 +3,31 @@
     "id": 1,
     "icon": {
       "type": "simple-icons",
-      "name": "github"
-    },
-    "text": "GitHub",
-    "link": "https://github.com/SomeRandomCpu"
-  },
-  {
-    "id": 2,
-    "icon": {
-      "type": "simple-icons",
       "name": "bluesky"
     },
     "text": "Bluesky",
     "link": "https://bsky.app/profile/duplicake.fyi"
   },
   {
+    "id": 2,
+    "icon": {
+      "type": "simple-icons",
+      "name": "discord"
+    },
+    "text": "Discord Server",
+    "link": "https://discord.gg/qW7XBSdx"
+  },
+  {
     "id": 3,
+    "icon": {
+      "type": "simple-icons",
+      "name": "github"
+    },
+    "text": "GitHub",
+    "link": "https://github.com/SomeRandomCpu"
+  },
+  {
+    "id": 4,
     "icon": {
       "type": "simple-icons",
       "name": "reddit"
@@ -27,7 +36,7 @@
     "link": "https://www.reddit.com/user/EnoughConcentrate897/"
   },
   {
-    "id": 4,
+    "id": 5,
     "icon": {
       "type": "simple-icons",
       "name": "youtube"
@@ -36,7 +45,7 @@
     "link": "https://www.youtube.com/@duplicake4054"
   },
   {
-    "id": 5,
+    "id": 6,
     "icon": {
       "type": "simple-icons",
       "name": "mastodon"
