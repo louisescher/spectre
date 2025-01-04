@@ -2,10 +2,19 @@
   {
     "id": 1,
     "icon": {
-      "type": "lucide",
+      "type": "simple-icons",
       "name": "github"
     },
     "text": "GitHub",
-    "link": "https://github.com/louisescher/spectre"
+    "link": "https://github.com/SomeRandomCpu"
+  },
+  {
+    "id": 1,
+    "icon": {
+      "type": "simple-icons",
+      "name": "bluesky"
+    },
+    "text": "Bluesky",
+    "link": "https://bsky.app/profile/duplicake.fyi"
   }
 ]

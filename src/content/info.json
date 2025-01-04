@@ -5,7 +5,7 @@
       "type": "lucide",
       "name": "cake"
     },
-    "text": "1 year old"
+    "text": "13 years old"
   },
   {
     "id": 2,
@@ -13,7 +13,6 @@
       "type": "lucide",
       "name": "earth"
     },
-    "type": "lucide",
-    "text": "Made in Germany"
+    "text": "UK"
   }
 ]
