@@ -242,6 +242,26 @@ info: # A TOML-like list of information about the project
 
 The `src/content/other/` directory is home to all MDX content which does not need it's own category. For example, you'll find an `about.mdx` file in here, which is responsible for the "About me" section on the homepage!
 
+## Deploying
+
+Spectre uses the [`node`](https://docs.astro.build/en/guides/integrations-guide/node/) adapter by default. If you want to deploy to Netlify or Vercel, you need their respective adapters:
+- [`@astrojs/netlify`](https://docs.astro.build/en/guides/integrations-guide/netlify/)
+- [`@astrojs/vercel`](https://docs.astro.build/en/guides/integrations-guide/vercel/)
+
+When deploying to GitHub Pages, make sure to remove the adapter from the `astro.config.ts` file altogether:
+
+```ts del={4-6} title="astro.config.ts"
+// ...
+export default defineConfig({
+  // ...
+  adapter: node({
+    mode: 'standalone'
+  })
+});
+```
+
+After doing so, you can follow the [official guide](https://docs.astro.build/en/guides/deploy/github/) to deploy your site.
+
 ## Modifying the theme
 
 As with all themes, you might wish to modify it. In terms of content, you should know where you can do that! If you want to modify the primary color for example, you can do so in the `src/styles/globals.css` file:
