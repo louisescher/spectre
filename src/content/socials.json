@@ -52,14 +52,5 @@
     },
     "text": "Mastodon (Mirror of Bluesky)",  
     "link": "https://mastodon.social/@duplicake.fyi@bsky.brid.gy"
-  },
-  {
-    "id": 4,
-    "icon": {
-      "type": "simple-icons",
-      "name": "mastodon"
-    },
-    "text": "Mastodon (No longer used)",  
-    "link": "https://mastodon.social/@duplicake"
   }
 ]
