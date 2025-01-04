@@ -1,5 +1,3 @@
-export const prerender = false;
-
 import css from '../../styles/giscus.css?raw';
 
 export async function ALL() {
