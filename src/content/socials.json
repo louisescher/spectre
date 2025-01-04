@@ -36,15 +36,6 @@
     "link": "https://www.youtube.com/@duplicake4054"
   },
   {
-    "id": 5,
-    "icon": {
-      "type": "simple-icons",
-      "name": "twitter"
-    },
-    "text": "Twitter (No longer used)",
-    "link": "https://x.com/malwarebytes95"
-  },
-  {
     "id": 4,
     "icon": {
       "type": "simple-icons",
