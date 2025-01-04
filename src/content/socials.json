@@ -16,5 +16,50 @@
     },
     "text": "Bluesky",
     "link": "https://bsky.app/profile/duplicake.fyi"
+  },
+  {
+    "id": 3,
+    "icon": {
+      "type": "simple-icons",
+      "name": "reddit"
+    },
+    "text": "Reddit",
+    "link": "https://www.reddit.com/user/EnoughConcentrate897/"
+  },
+  {
+    "id": 4,
+    "icon": {
+      "type": "simple-icons",
+      "name": "youtube"
+    },
+    "text": "YouTube",
+    "link": "https://www.youtube.com/@duplicake4054"
+  },
+  {
+    "id": 5,
+    "icon": {
+      "type": "simple-icons",
+      "name": "X"
+    },
+    "text": "X (No longer used)",
+    "link": "https://x.com/malwarebytes95"
+  },
+  {
+    "id": 4,
+    "icon": {
+      "type": "simple-icons",
+      "name": "mastodon"
+    },
+    "text": "Mastodon (Mirror of Bluesky)",  
+    "link": "https://mastodon.social/@duplicake.fyi@bsky.brid.gy"
+  },
+  {
+    "id": 4,
+    "icon": {
+      "type": "simple-icons",
+      "name": "mastodon"
+    },
+    "text": "Mastodon (No longer used)",  
+    "link": "https://mastodon.social/@duplicake"
   }
 ]
