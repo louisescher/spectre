@@ -52,5 +52,14 @@
     },
     "text": "Mastodon (Mirror of Bluesky)",  
     "link": "https://mastodon.social/@duplicake.fyi@bsky.brid.gy"
+  },
+  {
+    "id": 7,
+    "icon": {
+      "type": "simple-icons",
+      "name": "Internet Archive"
+    },
+    "text": "Internet Archive",  
+    "link": "https://archive.org/details/@magnus_vacuum"
   }
 ]
