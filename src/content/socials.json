@@ -57,9 +57,9 @@
     "id": 7,
     "icon": {
       "type": "simple-icons",
-      "name": "internet-archive"
+      "name": "internetarchive"
     },
-    "text": "Internet Archive",  
+    "text": "archive",  
     "link": "https://archive.org/details/@magnus_vacuum"
   }
 ]
