@@ -93,7 +93,7 @@ const publications = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
-    image: image(), 
+    image: image().optional(), // Make optional if not all publications have images
     link: z.string().url().optional(),
     info: z.array(
       z.object({
