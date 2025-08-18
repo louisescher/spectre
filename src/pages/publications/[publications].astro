@@ -1,0 +1,81 @@
+---
+import '../../styles/article.css';
+
+import Card from "../../components/Card.astro";
+import Layout from "../../layouts/Layout.astro";
+
+import type { GetStaticPaths } from "astro";
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
+import { getCollection } from "astro:content";
+import ImageGlow from "../../components/ImageGlow.astro";
+import Icon from "../../components/Icon.astro";
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+
+export const getStaticPaths = (async () => {
+  const projects = await getCollection('projects');
+
+  return projects.map((project) => ({ params: { project: project.id }, props: { project } }));
+}) satisfies GetStaticPaths;
+
+console.log(project.data.info);
+
+const { Content } = await render(project);
+---
+<Layout
+  title={project.data.title}
+  description={project.data.description}
+  image={project.data.image}
+  article={{
+    createdAt: project.data.date,
+  }}
+>
+  <div class="left" slot="left">
+    <Card class="toc-card">
+      <h2 class="no-mt">Info</h2>
+      <ul class="overview-list">
+        {project.data.info.map((info) => {
+          const Tag = info.link ? 'a' : 'div';
+          return (
+            <li>
+              <Tag href={info.link} class='project-info-item'>
+                <Icon type={info.icon.type} name={info.icon.name as any} width={24} height={24} class='glow-icon' />
+                <span>{info.text}</span>
+              </Tag>
+            </li>
+          )
+        })}
+      </ul>
+    </Card>
+  </div>
+  <article slot="right" data-pagefind-body>
+    <Card>
+      <div class="article-header" id="_top" data-pagefind-ignore>
+        {project.data.image && <ImageGlow quality={100} class="article-image" src={project.data.image} alt={project.data.title} />}
+        <div class="header">
+          <div>
+            <h1 class="no-mt article-h1">{project.data.title}</h1>
+          </div>
+          <div class="article-info">
+            <span>{project.data.date.toLocaleDateString()}</span>
+          </div>
+        </div>
+      </div>
+      <Content />
+      <hr class="end-of-article" />
+      <a href="/projects" class="block-link" data-pagefind-ignore>← Back to projects</a>
+    </Card>
+  </article>
+</Layout>
+<style>
+  .project-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+</style>
