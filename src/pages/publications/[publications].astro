@@ -24,7 +24,6 @@ return publications.map((pub) => ({
   params: { publications: pub.id },
   props: { publication: pub },
 }));
-  #return publications.map((publication) => ({ params: { publication: publication.id }, props: { publication } }));
 }) satisfies GetStaticPaths;
 
 console.log(publication.data.info);
