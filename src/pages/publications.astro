@@ -10,8 +10,8 @@ import { openGraph } from 'spectre:globals';
 const projects = await getCollection('projects');
 ---
 <Layout
-	title={openGraph.projects.title || "Projects"}
-	description={openGraph.projects.description}
+	title={openGraph.projects.title || "Publications"}
+	description={openGraph.publications.description}
 	pagefindIgnore
 >
   <div class="layout-grid-left" slot="left">
@@ -19,8 +19,8 @@ const projects = await getCollection('projects');
       <h2 class="no-mt">Stats</h2>
 			<div class="stats-div">
 				<div class="stat">
-					<h3 class="text-glow">{projects.length}</h3>
-					<span>Project{projects.length > 1 ? 's' : ''}</span>
+					<h3 class="text-glow">{publications.length}</h3>
+					<span>Project{publications.length > 1 ? 's' : ''}</span>
 				</div>
 			</div>
     </Card>
