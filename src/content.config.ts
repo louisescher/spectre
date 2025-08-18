@@ -101,8 +101,8 @@ const publications = defineCollection({
         icon: z.union([lucideIconSchema, simpleIconSchema]),
         link: z.string().url().optional(),
       })
-    )
-  })
+    ).optional(), // Make optional if not all publications have info
+  }),
 });
 
 export const collections = { tags, posts, projects,publications, other, quickInfo, socials, workExperience };
