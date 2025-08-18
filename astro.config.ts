@@ -44,6 +44,9 @@ const config = defineConfig({
         },
         projects: {
           title: 'Projects'
+        },
+        publications: {
+          title: 'publications'
         }
       },
       giscus: {
