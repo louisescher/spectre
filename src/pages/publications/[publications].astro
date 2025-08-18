@@ -12,15 +12,15 @@ import ImageGlow from "../../components/ImageGlow.astro";
 import Icon from "../../components/Icon.astro";
 
 interface Props {
-  project: CollectionEntry<'projects'>;
+  project: CollectionEntry<'publications'>;
 }
 
-const { project } = Astro.props;
+const { publication } = Astro.props;
 
 export const getStaticPaths = (async () => {
   const publications = await getCollection('publications');
 
-  return projects.map((project) => ({ params: { project: project.id }, props: { project } }));
+  return publications.map((publication) => ({ params: { publication: publication.id }, props: { publication } }));
 }) satisfies GetStaticPaths;
 
 console.log(project.data.info);
@@ -28,11 +28,11 @@ console.log(project.data.info);
 const { Content } = await render(project);
 ---
 <Layout
-  title={project.data.title}
-  description={project.data.description}
-  image={project.data.image}
+  title={publication.data.title}
+  description={publication.data.description}
+  image={publication.data.image}
   article={{
-    createdAt: project.data.date,
+    createdAt: publication.data.date,
   }}
 >
   <div class="left" slot="left">
