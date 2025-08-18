@@ -10,7 +10,7 @@ import { openGraph } from 'spectre:globals';
 const publications = await getCollection('publications');
 ---
 <Layout
-	title={openGraph.projects.title || "Publications"}
+	title={openGraph.publications.title || "Publications"}
 	description={openGraph.publications.description}
 	pagefindIgnore
 >
@@ -20,7 +20,7 @@ const publications = await getCollection('publications');
 			<div class="stats-div">
 				<div class="stat">
 					<h3 class="text-glow">{publications.length}</h3>
-					<span>Project{publications.length > 1 ? 's' : ''}</span>
+					<span>Publication{publications.length > 1 ? 's' : ''}</span>
 				</div>
 			</div>
     </Card>

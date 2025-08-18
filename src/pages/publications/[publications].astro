@@ -12,7 +12,7 @@ import ImageGlow from "../../components/ImageGlow.astro";
 import Icon from "../../components/Icon.astro";
 
 interface Props {
-  project: CollectionEntry<'publications'>;
+  publication: CollectionEntry<'publications'>;
 }
 
 const { publication } = Astro.props;
@@ -23,9 +23,9 @@ export const getStaticPaths = (async () => {
   return publications.map((publication) => ({ params: { publication: publication.id }, props: { publication } }));
 }) satisfies GetStaticPaths;
 
-console.log(project.data.info);
+console.log(publication.data.info);
 
-const { Content } = await render(project);
+const { Content } = await render(publication);
 ---
 <Layout
   title={publication.data.title}
@@ -43,7 +43,7 @@ const { Content } = await render(project);
           const Tag = info.link ? 'a' : 'div';
           return (
             <li>
-              <Tag href={info.link} class='project-info-item'>
+              <Tag href={info.link} class='publication-info-item'>
                 <Icon type={info.icon.type} name={info.icon.name as any} width={24} height={24} class='glow-icon' />
                 <span>{info.text}</span>
               </Tag>
@@ -56,19 +56,19 @@ const { Content } = await render(project);
   <article slot="right" data-pagefind-body>
     <Card>
       <div class="article-header" id="_top" data-pagefind-ignore>
-        {project.data.image && <ImageGlow quality={100} class="article-image" src={project.data.image} alt={project.data.title} />}
+        {publication.data.image && <ImageGlow quality={100} class="article-image" src={publication.data.image} alt={publication.data.title} />}
         <div class="header">
           <div>
-            <h1 class="no-mt article-h1">{project.data.title}</h1>
+            <h1 class="no-mt article-h1">{publication.data.title}</h1>
           </div>
           <div class="article-info">
-            <span>{project.data.date.toLocaleDateString()}</span>
+            <span>{publication.data.date.toLocaleDateString()}</span>
           </div>
         </div>
       </div>
       <Content />
       <hr class="end-of-article" />
-      <a href="/projects" class="block-link" data-pagefind-ignore>← Back to projects</a>
+      <a href="/publications" class="block-link" data-pagefind-ignore>← Back to projects</a>
     </Card>
   </article>
 </Layout>
