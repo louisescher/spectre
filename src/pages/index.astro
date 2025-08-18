@@ -12,13 +12,14 @@ import { getEntry } from 'astro:content';
 import { render } from 'astro:content';
 import { name, openGraph } from 'spectre:globals';
 
-const [posts, projects, about, workExperience, quickInfo, socials] = await Promise.all([
-	getCollection('posts', (post) => post.data.draft !== true),
-	getCollection('projects'),
-	getEntry('other', 'about'),
-	getCollection('workExperience'),
-	getCollection('quickInfo'),
-	getCollection('socials')
+const [posts, projects, publications, about, workExperience, quickInfo, socials] = await Promise.all([
+    getCollection('posts', (post) => post.data.draft !== true),
+    getCollection('projects'),
+    getCollection('publications'), // Fetch publications
+    getEntry('other', 'about'),
+    getCollection('workExperience'),
+    getCollection('quickInfo'),
+    getCollection('socials')
 ]);
 
 // biome-ignore lint/style/noNonNullAssertion: Should always be defined.
