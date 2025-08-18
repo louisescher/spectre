@@ -42,7 +42,7 @@ const { Content } = await render(publication);
     <Card class="toc-card">
       <h2 class="no-mt">Info</h2>
       <ul class="overview-list">
-        {project.data.info.map((info) => {
+        {publciation.data.info.map((info) => {
           const Tag = info.link ? 'a' : 'div';
           return (
             <li>
@@ -71,12 +71,12 @@ const { Content } = await render(publication);
       </div>
       <Content />
       <hr class="end-of-article" />
-      <a href="/publications" class="block-link" data-pagefind-ignore>← Back to projects</a>
+      <a href="/publications" class="block-link" data-pagefind-ignore>← Back to publicatons</a>
     </Card>
   </article>
 </Layout>
 <style>
-  .project-info-item {
+  .publciation-info-item {
     display: flex;
     align-items: center;
     gap: 1rem;
