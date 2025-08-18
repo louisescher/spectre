@@ -7,7 +7,7 @@ import Icon from "../components/Icon.astro";
 import Layout from "../layouts/Layout.astro";
 import { openGraph } from 'spectre:globals';
 
-const projects = await getCollection('projects');
+const publications = await getCollection('publications');
 ---
 <Layout
 	title={openGraph.projects.title || "Publications"}
@@ -29,7 +29,7 @@ const projects = await getCollection('projects');
 		<Card>
 			<div class="header-container">
 				<Icon type='lucide' name="folder-git" width={24} height={24} class='glow-icon' />
-				<h2>Latest Projects</h2>
+				<h2>Latest Publications</h2>
 			</div>
 			<div class="content-container">
 				{projects.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).map((post) => (
