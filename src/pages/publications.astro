@@ -1,0 +1,65 @@
+---
+import '../styles/article-list.css';
+
+import { getCollection } from "astro:content";
+import Card from "../components/Card.astro";
+import Icon from "../components/Icon.astro";
+import Layout from "../layouts/Layout.astro";
+import { openGraph } from 'spectre:globals';
+
+const projects = await getCollection('projects');
+---
+<Layout
+	title={openGraph.projects.title || "Projects"}
+	description={openGraph.projects.description}
+	pagefindIgnore
+>
+  <div class="layout-grid-left" slot="left">
+    <Card class="flex-col-card">
+      <h2 class="no-mt">Stats</h2>
+			<div class="stats-div">
+				<div class="stat">
+					<h3 class="text-glow">{projects.length}</h3>
+					<span>Project{projects.length > 1 ? 's' : ''}</span>
+				</div>
+			</div>
+    </Card>
+  </div>
+  <div class="layout-grid-right" slot="right">
+		<Card>
+			<div class="header-container">
+				<Icon type='lucide' name="folder-git" width={24} height={24} class='glow-icon' />
+				<h2>Latest Projects</h2>
+			</div>
+			<div class="content-container">
+				{projects.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).map((post) => (
+					<a href={`/projects/${post.id}`} class="post-container">
+						<div class="post-header">
+							<h3>{post.data.title}</h3>
+							<span class="post-date">{post.data.date.toLocaleDateString()}</span>
+						</div>
+						<span>{post.data.description}</span>
+					</a>
+				))}
+			</div>
+		</Card>
+  </div>
+</Layout>
+<style>
+	.stats-div {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.stat {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.stat h3 {
+		font-size: 2em;
+		margin: 0;
+		margin-bottom: .5rem;
+	}
+</style>
