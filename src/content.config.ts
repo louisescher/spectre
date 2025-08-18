@@ -87,4 +87,22 @@ const projects = defineCollection({
   })
 });
 
+const publications = defineCollection({
+  loader: glob({ base: "src/content/publications", pattern: "**/*.{md,mdx}" }),
+  schema: ({ image }) => z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.coerce.date(),
+    image: image(), 
+    link: z.string().url().optional(),
+    info: z.array(
+      z.object({
+        text: z.string(),
+        icon: z.union([lucideIconSchema, simpleIconSchema]),
+        link: z.string().url().optional(),
+      })
+    )
+  })
+});
+
 export const collections = { tags, posts, projects, other, quickInfo, socials, workExperience };
