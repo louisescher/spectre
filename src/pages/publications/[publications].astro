@@ -20,7 +20,10 @@ const { publication } = Astro.props;
 export const getStaticPaths = (async () => {
   const publications = await getCollection('publications');
 
-  return publications.map((publication) => ({ params: { publication: publication.id }, props: { publication } }));
+  return publications.map((publication) => ({
+    params: { publications: publication.id }, // Match the dynamic route parameter name
+    props: { publication },
+  }));
 }) satisfies GetStaticPaths;
 
 console.log(publication.data.info);
