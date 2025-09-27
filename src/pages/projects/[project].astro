@@ -23,8 +23,6 @@ export const getStaticPaths = (async () => {
   return projects.map((project) => ({ params: { project: project.id }, props: { project } }));
 }) satisfies GetStaticPaths;
 
-console.log(project.data.info);
-
 const { Content } = await render(project);
 ---
 <Layout
