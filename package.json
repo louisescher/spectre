@@ -12,14 +12,14 @@
     "postbuild": "pagefind --site dist/client"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.4",
-    "@astrojs/node": "^9.4.2",
-    "@astrojs/sitemap": "^3.5.0",
+    "@astrojs/mdx": "^4.3.10",
+    "@astrojs/node": "^9.5.0",
+    "@astrojs/sitemap": "^3.6.0",
     "@iconify-json/lucide": "^1.2.20",
     "@iconify-json/simple-icons": "^1.2.18",
     "@iconify/utils": "^2.2.1",
     "@shikijs/themes": "^1.26.1",
-    "astro": "^5.13.2",
+    "astro": "^5.15.5",
     "astro-expressive-code": "^0.38.3",
     "sharp": "^0.33.5"
   },
