@@ -46,6 +46,7 @@ const config = defineConfig({
           title: 'Projects'
         }
       },
+      /*
       giscus: {
         repository: GISCUS_REPO,
         repositoryId: GISCUS_REPO_ID,
@@ -57,6 +58,7 @@ const config = defineConfig({
         emitMetadata: GISCUS_EMIT_METADATA === "true",
         lang: GISCUS_LANG,
       }
+      /*
     })
   ],
   adapter: node({
