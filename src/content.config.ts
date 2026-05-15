@@ -33,7 +33,7 @@ const socials = defineCollection({
 		id: z.number(),
 		icon: z.union([lucideIconSchema, simpleIconSchema]),
 		text: z.string(),
-		link: z.string().url(),
+		link: z.url(),
 	}),
 });
 
@@ -77,12 +77,12 @@ const projects = defineCollection({
 			description: z.string(),
 			date: z.coerce.date(),
 			image: image(),
-			link: z.string().url().optional(),
+			link: z.url().optional(),
 			info: z.array(
 				z.object({
 					text: z.string(),
 					icon: z.union([lucideIconSchema, simpleIconSchema]),
-					link: z.string().url().optional(),
+					link: z.url().optional(),
 				}),
 			),
 		}),
