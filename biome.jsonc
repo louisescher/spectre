@@ -1,0 +1,94 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.4.15/schema.json",
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true,
+		"defaultBranch": "main"
+	},
+	"files": {
+		"ignoreUnknown": false,
+		"includes": ["./src/**", "./package/**"]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double"
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
+	"overrides": [
+		{
+			"includes": ["**/*.css"],
+			"linter": {
+				"rules": {
+					"complexity": {
+						"noImportantStyles": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["**/*.ts", "**/*.tsx"],
+			"linter": {
+				"rules": {
+					"style": {
+						"noNonNullAssertion": "off"
+					},
+					"suspicious": {
+						"noExplicitAny": "off",
+						"noAssignInExpressions": "off",
+						"noMisleadingCharacterClass": "off"
+					},
+					"complexity": {
+						"noBannedTypes": "off"
+					},
+					"a11y": {
+						"useKeyWithClickEvents": "off",
+						"noStaticElementInteractions": "off"
+					}
+				}
+			}
+		},
+		{
+			"includes": ["**/*.astro"],
+			"linter": {
+				"rules": {
+					"style": {
+						"useConst": "off",
+						"useImportType": "off",
+						"noNonNullAssertion": "off"
+					},
+					"complexity": {
+						"noImportantStyles": "off"
+					},
+					"correctness": {
+						"noUnusedVariables": "off",
+						"noUnusedImports": "off"
+					}
+				}
+			}
+		}
+	]
+}

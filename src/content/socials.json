@@ -1,11 +1,11 @@
 [
-  {
-    "id": 1,
-    "icon": {
-      "type": "lucide",
-      "name": "github"
-    },
-    "text": "GitHub",
-    "link": "https://github.com/louisescher/spectre"
-  }
+	{
+		"id": 1,
+		"icon": {
+			"type": "lucide",
+			"name": "github"
+		},
+		"text": "GitHub",
+		"link": "https://github.com/louisescher/spectre"
+	}
 ]

@@ -30,7 +30,7 @@ yarn create astro --template louisescher/spectre
 - Markdown / MDX Support
 - Builds on content collections
 - Search powered by [pagefind](https://pagefind.app)
-- Comments powered by [giscus](https://giscus.app) (can be turned off)
+- Comments powered by [giscus](https://giscus.app) (can be turned off, see below for details)
 - More!
 
 ## Curious?
@@ -40,3 +40,7 @@ Head over to [the preview page](https://spectre.lou.gg) to find out more!
 ### Spectre Integration
 
 If you want to know more about how the custom integration that is used in the `astro.config.ts` file works, head over to the [integration's own README](https://github.com/louisescher/spectre/tree/master/package)!
+
+### Turning off giscus
+
+There should be a file called astro.config.ts in the cloned/forked repository. Inside of that file, there's a defineConfig function, inside of which is an integrations array that contains the spectre integration along with its options. The live version has the giscus option on Line 47. Simply removing Lines 47 to 57 should disable giscus.

@@ -1,89 +1,95 @@
-.layout-grid-left, .layout-grid-right {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 2rem;
+.layout-grid-left,
+.layout-grid-right {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 2rem;
 }
 
 @media screen and (max-width: 640px) {
-  .layout-grid-left, .layout-grid-right {
-    gap: 1rem;
-  }
+	.layout-grid-left,
+	.layout-grid-right {
+		gap: 1rem;
+	}
 }
 
 .flex-col-card {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .header-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
 }
 
 .header-container * {
-  margin: 0;
+	margin: 0;
 }
 
 .prose {
-  line-height: 1.6;
+	line-height: 1.6;
 }
 
 .post-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-  border: 1px solid #353535;
-  color: #ffffff;
-  text-decoration: none;
-  transition: background-color .15s ease, border .15s ease;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem;
+	border: 1px solid #353535;
+	color: #ffffff;
+	text-decoration: none;
+	transition:
+		background-color 0.15s ease,
+		border 0.15s ease;
 }
 
-.post-container:hover, .post-container:focus-visible {
-  background-color: rgba(140, 92, 245, .125);
-  border: 1px solid var(--primary);
+.post-container:hover,
+.post-container:focus-visible {
+	background-color: rgba(140, 92, 245, 0.125);
+	border: 1px solid var(--primary);
 }
 
 .post-container:focus-visible {
-  outline: none;
+	outline: none;
 }
 
-.post-date, .work-experience-duration {
-  color: #c7c7c7;
+.post-date,
+.work-experience-duration {
+	color: #c7c7c7;
 }
 
 .work-experience-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 .work-experience-entry:not(:last-of-type) {
-  border-bottom: 1px solid #353535;
-  padding-bottom: 1rem;
+	border-bottom: 1px solid #353535;
+	padding-bottom: 1rem;
 }
 
 .work-experience-duration {
-  font-size: .925rem;
+	font-size: 0.925rem;
 }
 
 .work-experience-company {
-  margin-top: .25rem;
-  margin-bottom: .5rem;
+	margin-top: 0.25rem;
+	margin-bottom: 0.5rem;
 }
 
 .work-experience-role {
-  margin-bottom: .75rem;
+	margin-bottom: 0.75rem;
 }
 
 .socials-link {
-  color: white;
-  display: flex;
-  flex-direction: row;
-  gap: .75rem;
-  align-items: center;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	gap: 0.75rem;
+	align-items: center;
 }

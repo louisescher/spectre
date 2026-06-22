@@ -1,4 +1,4 @@
-import type { Plugin } from 'vite';
+import type { Plugin } from "vite";
 
 /**
  * Builds a Vite plugin that creates a virtual module.
@@ -11,7 +11,7 @@ import type { Plugin } from 'vite';
 export function viteVirtualModulePluginBuilder(
 	moduleId: string,
 	name: string,
-	moduleContent: string
+	moduleContent: string,
 ) {
 	return function modulePlugin(): Plugin {
 		const resolvedVirtualModuleId = `\0${moduleId}`; // Prefix with \0 to avoid conflicts

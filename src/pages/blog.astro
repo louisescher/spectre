@@ -1,13 +1,13 @@
 ---
-import '../styles/article-list.css';
+import "../styles/article-list.css";
 
 import { getCollection } from "astro:content";
+import { openGraph } from "spectre:globals";
 import Card from "../components/Card.astro";
 import Icon from "../components/Icon.astro";
 import Layout from "../layouts/Layout.astro";
-import { openGraph } from 'spectre:globals';
 
-const posts = await getCollection('posts', (post) => post.data.draft !== true);
+const posts = await getCollection("posts", (post) => post.data.draft !== true);
 const tags = posts.flatMap((post) => post.data.tags.map((tag) => tag.id));
 ---
 <Layout

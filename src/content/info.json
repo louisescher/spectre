@@ -1,19 +1,19 @@
 [
-  {
-    "id": 1,
-    "icon": {
-      "type": "lucide",
-      "name": "cake"
-    },
-    "text": "1 year old"
-  },
-  {
-    "id": 2,
-    "icon": {
-      "type": "lucide",
-      "name": "earth"
-    },
-    "type": "lucide",
-    "text": "Made in Germany"
-  }
+	{
+		"id": 1,
+		"icon": {
+			"type": "lucide",
+			"name": "cake"
+		},
+		"text": "1 year old"
+	},
+	{
+		"id": 2,
+		"icon": {
+			"type": "lucide",
+			"name": "earth"
+		},
+		"type": "lucide",
+		"text": "Made in Germany"
+	}
 ]

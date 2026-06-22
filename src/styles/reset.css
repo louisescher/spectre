@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'Geist';
-  src: url('/fonts/Geist.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Geist";
+	src: url("/fonts/Geist.woff2") format("woff2");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: 'Geist Mono';
-  src: url('/fonts/GeistMono.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Geist Mono";
+	src: url("/fonts/GeistMono.woff2") format("woff2");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
 }
 
 /* From https://github.com/withstudiocms/ui */
@@ -24,7 +24,7 @@
 
 html {
 	color-scheme: dark;
-  background-color: #0b0b0b;
+	background-color: #0b0b0b;
 }
 
 html,
@@ -34,7 +34,7 @@ body {
 
 body {
 	-webkit-font-smoothing: antialiased;
-  font-family: 'Geist', Arial, Helvetica, sans-serif;
+	font-family: "Geist", Arial, Helvetica, sans-serif;
 }
 
 input,
@@ -52,7 +52,7 @@ h5,
 h6,
 code {
 	overflow-wrap: anywhere;
-	font-family: 'Geist Mono', 'Courier New', Courier, monospace;
+	font-family: "Geist Mono", "Courier New", Courier, monospace;
 }
 
 h1,
@@ -61,7 +61,7 @@ h3,
 h4,
 h5,
 h6 {
-  text-wrap: pretty;
+	text-wrap: pretty;
 }
 
 button {
@@ -72,24 +72,26 @@ button {
 }
 
 p:last-of-type {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
-pre, pre *, code {
-	font-family: 'Geist Mono', 'Courier New', Courier, monospace;
-  line-height: 1;
+pre,
+pre *,
+code {
+	font-family: "Geist Mono", "Courier New", Courier, monospace;
+	line-height: 1;
 }
 
 pre {
-  border: 1px solid rgb(#353535);
-  overflow-y: hidden;
-  padding: .5rem;
-  border-radius: .25rem;
+	border: 1px solid rgb(#353535);
+	overflow-y: hidden;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
 }
 
 pre.astro-code code {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.875em;
-  gap: .5rem;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.875em;
+	gap: 0.5rem;
 }

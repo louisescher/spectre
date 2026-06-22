@@ -1,1 +1,1 @@
-export { default } from './integration';
+export { default, type GiscusMapping } from "./integration";

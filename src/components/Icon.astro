@@ -1,24 +1,24 @@
 ---
-import { icons as lucideIconsJSON } from '@iconify-json/lucide';
-import { icons as simpleIconsJSON } from '@iconify-json/simple-icons';
-import type { icons as lucideIcons } from '@iconify-json/lucide/icons.json';
-import type { icons as simpleIcons } from '@iconify-json/simple-icons/icons.json';
-import { getIconData, iconToSVG, replaceIDs } from '@iconify/utils';
-import { AstroError } from 'astro/errors';
-import type { HTMLAttributes } from 'astro/types';
+import { getIconData, iconToSVG, replaceIDs } from "@iconify/utils";
+import { icons as lucideIconsJSON } from "@iconify-json/lucide";
+import type { icons as lucideIcons } from "@iconify-json/lucide/icons.json";
+import { icons as simpleIconsJSON } from "@iconify-json/simple-icons";
+import type { icons as simpleIcons } from "@iconify-json/simple-icons/icons.json";
+import { AstroError } from "astro/errors";
+import type { HTMLAttributes } from "astro/types";
 
-interface SVGAttributes extends HTMLAttributes<'svg'> {
+interface SVGAttributes extends HTMLAttributes<"svg"> {
 	// biome-ignore lint/suspicious/noExplicitAny: Allow any string index
 	[key: string]: any;
 }
 
-interface LucideProps extends HTMLAttributes<'svg'> {
-	type: 'lucide';
+interface LucideProps extends HTMLAttributes<"svg"> {
+	type: "lucide";
 	name: keyof typeof lucideIcons;
 }
 
-interface SimpleIconsProps extends HTMLAttributes<'svg'> {
-	type: 'simple-icons';
+interface SimpleIconsProps extends HTMLAttributes<"svg"> {
+	type: "simple-icons";
 	name: keyof typeof simpleIcons;
 }
 
@@ -27,14 +27,14 @@ type Props = LucideProps | SimpleIconsProps;
 const { type, name, ...props } = Astro.props;
 const attributes = props as SVGAttributes;
 
-if (type !== 'lucide' && type !== 'simple-icons') {
+if (type !== "lucide" && type !== "simple-icons") {
 	throw new AstroError(`Invalid icon type "${type}"`);
 }
 
 // biome-ignore lint/suspicious/noExplicitAny: Needed type not exported
 let iconData: any;
 
-if (type === 'lucide') {
+if (type === "lucide") {
 	iconData = getIconData(lucideIconsJSON, name);
 } else {
 	iconData = getIconData(simpleIconsJSON, name);
@@ -52,7 +52,9 @@ const renderData = iconToSVG(iconData, {
 const body = replaceIDs(renderData.body);
 
 let renderAttribsHTML =
-	body.indexOf('xlink:') === -1 ? '' : ' xmlns:xlink="http://www.w3.org/1999/xlink"';
+	body.indexOf("xlink:") === -1
+		? ""
+		: ' xmlns:xlink="http://www.w3.org/1999/xlink"';
 
 for (const attr in attributes) {
 	renderAttribsHTML += ` ${attr}="${attributes[attr]}"`;
